@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Estilos Gerais
+/* 2. Header
+/* 3. Main
+/* 4. Aside
+/* 5. Main-tabela
+/* 6. Footer
+/**********************************/
+
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root {
+    --cor0:#7EDFA8;
+    --cor1: #25607A;
+    --cor2: #DBDB00;
+    --cor3: #C323EB;
+    --cor4: #F56C14;
+    --cor5: #dbdb0054;
+
+    --fonte0: Arial, Helvetica, sans-serif;
+    --fonte1: 'Bebas Neue', cursive;
+}
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor5);
+    font-family: var(--fonte0);
+}
+
+a,
+a:hover,
+a:active,
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+p {
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 2em;
+}
+
+em {
+    font-style: italic;
+}
+
+/**********************************/
+/* 2. Header
+/**********************************/
+
+header {
+    background-image: repeating-linear-gradient(to bottom, var(--cor0), rgb(6, 161, 6));
+    box-shadow: 2px 4px 10px #0000005e;
+    width: 100%;
+}
+.container {
+    background: linear-gradient(rgba(0,0,0,.15), rgba(0, 0, 0, 0.050)100%);
+}
+
+.container-titulos {
+    width: 600px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: #FFFF;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, .4666);
+    font-family: var(--fonte1);
+    font-size: 42px;
+    letter-spacing: 1.5px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+header h3 {
+    color: #FFFF;
+    text-align: center;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, .4666);
+    font-size: 18px;
+    padding-bottom: 25px;
+}
+
+header nav {
+    padding: 10px;
+}
+
+.nav__link {
+    color: #dddddd;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.nav__link:hover {
+    color: #FFFFFF;
+}
+
+/**********************************/
+/* 3. Main
+/**********************************/
+
+main {
+    background-color: #FFF;
+    box-shadow: 0px 4px 10px #0000005e;
+    border-radius: 0 0 5px 5px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    min-width: 400px;
+    max-width: 800px;
+    padding: 15px;
+}
+
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.subtitulo {
+    background-image: repeating-linear-gradient(to right, var(--cor0), #ffffff);
+    margin: 10px 0;
+    padding: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+main figure {
+    margin: 10px 0;
+    text-align: center;
+}
+.capa-autores {
+    width: 100%;
+    height: 400px;
+}
+
+.capa-personagens {
+    width: 100%;
+    height: 280px;
+}
+
+main figcaption {
+    padding: 5px;
+    text-align: center;
+}
+
+.autor-link {
+    background-color: var(--cor0);
+    color: rgb(3, 107, 3);
+}
+
+.autor-link:hover {
+    text-decoration: underline;
+}
+
+/**********************************/
+/* 4. Aside
+/**********************************/
+.aside-video {
+    background-color: black;
+    margin: 40px auto;
+}
+
+.aside-video iframe {
+    width: 100%;
+    height: 420px;
+    padding: 10px;
+}
+
+
+
+/**********************************/
+/* 5. Main-tabela
+/**********************************/
+
+.subtitulo-tabela {
+    border-radius: 5px 5px 0 0;
+    background-color: #185C30;
+    color: #FFF;
+    box-shadow: 2px 4px 10px #0000005e;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.tabela {
+    padding: 10px;
+    background-color: #7EDFA8;
+    margin: 0 auto;
+    box-shadow: 2px 4px 10px #0000005e;
+    margin-bottom: 20px;
+}
+
+.container-lista {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.coluna1 li,
+.coluna2 li {
+    padding-top: 8px;
+}
+
+.coluna1 a,
+.coluna2 a {
+    color: rgb(3, 107, 3);
+    text-decoration: underline;
+}
+
+.coluna1 a:hover,
+.coluna2 a:hover {
+    color: var(--cor1);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.link-canal {
+    color: var(--cor1);
+    font-weight: bold;
+}
+
+.link-canal:hover {
+    color: #FFF;
+}
+/**********************************/
+/* 6. Footer
+/**********************************/
+
+footer{
+    background-color: #185C30;
+    color: #FFF;
+}
+
+footer p {
+    font-size: 16px;
+    text-align: center;
+}
+
+footer b {
+    font-weight: bold;
+}
