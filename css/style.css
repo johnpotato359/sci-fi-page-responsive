@@ -2,6 +2,8 @@
 *,
 *::before,
 *::after {
+    margin: 0;
+    padding: 0;
 	box-sizing: border-box;
 }
 
@@ -48,8 +50,7 @@ body {
 a,
 a:hover,
 a:active,
-a:link,
-a:visited {
+a:link {
 	text-decoration: none;
 }
 
@@ -74,12 +75,14 @@ header {
 }
 .container {
     background: linear-gradient(rgba(0,0,0,.15), rgba(0, 0, 0, 0.050)100%);
+    width: 100%;
 }
 
 .container-titulos {
-    width: 600px;
-    height: 150px;
-    margin: 0 auto;
+    width: 100%;
+    min-height: 150px;
+    margin: auto;
+    text-align: center;
 }
 
 header h1 {
@@ -88,7 +91,7 @@ header h1 {
     text-transform: uppercase;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, .4666);
     font-family: var(--fonte1);
-    font-size: 42px;
+    font-size: 3em;
     letter-spacing: 1.5px;
     padding-top: 40px;
     padding-bottom: 25px;
@@ -98,8 +101,8 @@ header h3 {
     color: #FFFF;
     text-align: center;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, .4666);
-    font-size: 18px;
-    padding-bottom: 25px;
+    font-size: 1.2em;
+    padding: 0 25px 25px 25px;
 }
 
 header nav {
@@ -110,9 +113,12 @@ header nav {
     color: #dddddd;
     font-weight: bold;
     padding: 10px;
+    transition: .3s;
 }
 
 .nav__link:hover {
+    background-color: #dbdb00a6;
+    border-radius: 3px;
     color: #FFFFFF;
 }
 
@@ -126,7 +132,7 @@ main {
     border-radius: 0 0 5px 5px;
     margin: 0 auto;
     margin-bottom: 40px;
-    min-width: 400px;
+    min-width: 320px;
     max-width: 800px;
     padding: 15px;
 }
@@ -151,22 +157,19 @@ main {
     text-transform: uppercase;
 }
 
-.negrito {
-    font-weight: bold;
-}
-
 main figure {
     margin: 10px 0;
     text-align: center;
 }
-.capa-autores {
-    width: 100%;
-    height: 400px;
+
+.time-machine-container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
-.capa-personagens {
+img {
     width: 100%;
-    height: 280px;
 }
 
 main figcaption {
@@ -183,75 +186,55 @@ main figcaption {
     text-decoration: underline;
 }
 
+div.video {
+    position: relative;
+    background: var(--cor0);
+    height: 0;
+    margin: 10px -15px 15px -15px;
+    padding-bottom: 59%;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
 /**********************************/
 /* 4. Aside
 /**********************************/
-.aside-video {
-    background-color: black;
-    margin: 40px auto;
-}
 
-.aside-video iframe {
+aside > h3 {
     width: 100%;
-    height: 420px;
-    padding: 10px;
-}
-
-
-
-/**********************************/
-/* 5. Main-tabela
-/**********************************/
-
-.subtitulo-tabela {
-    border-radius: 5px 5px 0 0;
-    background-color: #185C30;
     color: #FFF;
-    box-shadow: 2px 4px 10px #0000005e;
-    font-size: 16px;
-    font-weight: bold;
+    font-family: var(--fonte0);
+    background-color: #185C30;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     padding: 10px;
-}
-
-.tabela {
-    padding: 10px;
-    background-color: #7EDFA8;
-    margin: 0 auto;
-    box-shadow: 2px 4px 10px #0000005e;
     margin-bottom: 20px;
 }
 
-.container-lista {
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-evenly;
+aside {
+    margin-top: 20px;
+    background-color: var(--cor0);
+    border-radius: 8px;
 }
 
-.coluna1 li,
-.coluna2 li {
-    padding-top: 8px;
+aside > p,ul {
+    padding: 0 20px 20px 20px;
 }
 
-.coluna1 a,
-.coluna2 a {
-    color: rgb(3, 107, 3);
-    text-decoration: underline;
+ul {
+    list-style-type: '\2714\0020\0020';
+    columns: 2;
+    list-style-position: inside;
 }
 
-.coluna1 a:hover,
-.coluna2 a:hover {
-    color: var(--cor1);
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-.link-canal {
-    color: var(--cor1);
-    font-weight: bold;
-}
-
-.link-canal:hover {
-    color: #FFF;
+.p-aside {
+    margin-top: 10px;
 }
 /**********************************/
 /* 6. Footer
@@ -260,6 +243,7 @@ main figcaption {
 footer{
     background-color: #185C30;
     color: #FFF;
+    padding: 4px 10px 4px 10px;
 }
 
 footer p {
@@ -267,6 +251,12 @@ footer p {
     text-align: center;
 }
 
-footer b {
+footer a {
+    color: #FFF;
     font-weight: bold;
 }
+
+footer a:hover {
+    color: var(--cor2);
+}
+
